@@ -1,3 +1,6 @@
 ROLES=('admin','analyst','viewer')
 STATES=('queued','running','done','failed')
 ZONES=('冷藏','冷冻','常温对照')
+MONITOR_STATES=('active','invalidated','stopped')
+LOOK_STATES=('running','done','failed')
+LOOK_DECISIONS=('alert','clear')

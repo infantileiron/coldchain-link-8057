@@ -1,2 +1,4 @@
 -- Initial schema is created through SQLAlchemy Base.metadata.create_all.
 -- Natural keys: users.email, shipments.code, samples.code; unique constraints enforce idempotency.
+-- 货损监测：loss_batches / zone_budgets / monitors / monitor_looks / monitor_inclusions / alerts
+-- 均由 SQLAlchemy create_all 建立；唯一约束保证收齐与查看的幂等。

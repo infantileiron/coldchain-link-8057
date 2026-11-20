@@ -6,6 +6,8 @@ x-app: &app
     REDIS_URL: redis://redis:6379/0
     JWT_SECRET: ${JWT_SECRET:-coldchain-demo-change-in-production-3102}
     SEED_DEMO: ${SEED_DEMO:-true}
+    MONITOR_ALPHA_TOTAL: ${MONITOR_ALPHA_TOTAL:-0.05}
+    MONITOR_LOOK_CAP: ${MONITOR_LOOK_CAP:-50}
   volumes: [artifacts:/artifacts]
   depends_on:
     db: {condition: service_healthy}

@@ -10,3 +10,13 @@ class StudyInput(BaseModel):
  name:str=Field(min_length=1,max_length=100);zone:Literal['冷藏','冷冻','常温对照'];feature:Literal['exposure','excursions']='exposure'
 class RecommendationInput(BaseModel):
  study_id:int;note:str=Field(min_length=10,max_length=2000);owner:str=Field(min_length=1,max_length=60)
+class BatchInput(BaseModel):
+ shipment_id:int
+ idempotency_key:Optional[str]=Field(default=None,max_length=80)
+class LookInput(BaseModel):
+ idempotency_key:Optional[str]=Field(default=None,max_length=80)
+ note:Optional[str]=Field(default=None,max_length=500)
+class StopInput(BaseModel):
+ reason:Optional[str]=Field(default=None,max_length=500)
+class MonitorInput(BaseModel):
+ recommendation_id:int
